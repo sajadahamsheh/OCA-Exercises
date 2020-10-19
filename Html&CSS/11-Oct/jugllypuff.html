@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+
+        }
+        .navbar {
+        overflow: hidden;
+        background-color: #c5b4b4;
+        position: fixed;
+        top: 0;
+    
+        width: 100%;
+        height: 8vh;
+        opacity: 80%;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color:#ffcfdf ;
+        border-right:2px solid #ffcfdf;
+        padding:1rem ;
+        width: 25%;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: 'Teko', sans-serif;
+    }
+
+    .navbar a:hover {
+        background: #3d656f;
+        color:#ffcfdf ;
+       
+
+    }
+.container{
+    display: grid;
+    grid-gap: .5rem;
+    background-image:url(wp2410704.jpg) ;
+    
+        height: 101%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        grid-template-areas:
+                'header header header'
+                'section section section'
+                'footer footer footer';
+
+   
+  
+}
+header{
+    
+            text-align: center;
+            position: sticky;
+            top: 0;
+            grid-area: header;
+            height: 20%;
+       }
+       section{
+        grid-area: section;
+        width: 55%;
+       margin-top: 7rem;
+        margin-left: 1rem;
+        font-family: 'Shadows Into Light', cursive;
+       
+       }
+
+        footer {
+            grid-area: footer;
+            
+        }
+.img1{
+    position: relative;
+    left: 13rem;
+    bottom: -2rem;
+}
+.img2{
+    position: relative;
+    left: 6rem;
+   top: 11rem;
+   height: 3rem;
+}
+.photo{
+    background-image:url(images.png) ;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header >
+            <div class="navbar">
+                <a  href="http://127.0.0.1:5500/home-page.html">ppoi</a>
+                <a href="http://127.0.0.1:5500/about.html">llll</a>
+                <a href="http://127.0.0.1:5500/projects.html">kkkk</a>
+                <a href="http://127.0.0.1:5500/contact1.html">iiii</a>
+            </div>
+            
+</header>
+
+<section class="one">
+    <img class="img1" src="Ragepuff.jpg"  width="70rem">
+    <img class="img2" src="04499b23327a48c6c23813777cf3341d.jpg"  width="55">
+
+    <h3><b>don't make jigglypuff mad: </b></h3> 
+            <p >
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quis tempora voluptatem vel blanditiis nam pariatur odio tempore odit eius ea mollitia eveniet, dolore quia, porro delectus eaque aliquid sit. ipsum*40 ipsum3 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quis tempora voluptatem vel blanditiis nam pariatur odio tempore odit eius ea mollitia eveniet, dolore quia, porro delectus eaque aliquid sit. ipsum*40 ipsum3. 
+    </p>
+    <br>
+   <h3>
+
+       <b>jigglypuff is so cute: </b> 
+   </h3>
+    <p >
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quis tempora voluptatem vel blanditiis nam pariatur odio tempore odit eius ea mollitia eveniet, dolore quia, porro delectus eaque aliquid sit. ipsum*40 ipsum3 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quis tempora voluptatem vel blanditiis nam pariatur odio tempore odit eius ea mollitia eveniet, dolore quia, porro delectus eaque aliquid sit. ipsum*40 ipsum3 
+    </p>
+    <br>
+    
+    <h3><b>even small things make difference</b></h3>
+    <video width="200" height="130" controls>
+  <source src="Jigglypuff Song.mp4" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+</section>
+    </div>
+   
+</body>
+</html>
