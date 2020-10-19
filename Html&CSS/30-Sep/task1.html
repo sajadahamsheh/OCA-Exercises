@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            background-color: lemonchiffon;
+            width: 400px;
+            margin: auto;
+        }
+
+        .butten {
+            text-align: center;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+        #fname {
+            margin-right: 5px;
+        }
+
+        #lname {
+            margin-left: 5px;
+        }
+
+        #email {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <br>
+    <br>
+    <form>
+        <fieldset>
+            <legend>Parsonal detailes</legend>
+            <div class="center">
+                <label id="PAN" for="fname" class="center">First name:</label>
+                <input type="text" name="fname"><br> <br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+
+                <br>
+                <br>
+                <label for="email">Enter email:</label>
+                <input type="email" id="email" name="email">
+
+                <br>
+                <br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label></div>
+            <br>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>City</legend>
+            <div class="center"><label for="browser">
+
+                    <label for="city">city:</label>
+                    <select name="city" id="city">
+                        <option value="amman">amman</option>
+                        <option value="madaba">madaba</option>
+                        <option value="zara">zara</option>
+
+                    </select>
+            </div>
+
+
+        </fieldset>
+        <br>
+
+        <div class="butten"><input type="submit" value="Subscribe">
+        </div>
+
+
+    </form>
+</body>
+
+</html>

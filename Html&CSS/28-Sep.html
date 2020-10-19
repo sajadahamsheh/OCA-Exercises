@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabels and format</title>
+    <style>
+        table,
+        th,
+        td {
+            border:2.5px solid rgb(206, 157, 93);
+        }
+    </style>
+</head>
+<body>
+    <table  style="width:100%">
+        <thead>
+         <tr>
+             <th >id</th>
+             <th >first name</th>
+             <th>last name</th>
+             <th>num</th>
+             <th>email</th>
+         </tr>   
+        </thead>
+        <tr rowspan="2" >
+            <td>1</td>
+            <td>saja</td>
+            <td>dahamsheh</td>
+            <td rowspan="2">num</td>
+             <td>email</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td colspan="2">lama</td>
+            <td>abdalla</td>
+            <td>num</td>
+            <td>email</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>yasmeen</td>
+            <td>omar</td>
+            <td>num</td>
+            <td>email</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>yasmeen</td>
+            <td>omar</td>
+            <td>num</td>
+            <td>email</td>
+        </tr>
+        
+    </table>
+
+    <h1>HTML Forms</h1>
+
+    <form>
+        <p>enter your name:</p>
+        <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+ 
+        <br>
+        <br>
+        <p>enter your genders:</p>
+        <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+
+  <br>
+  <br>
+  <p>enter yourphone type:</p>
+  <input type="checkbox" name="phone type1" value="i phone">
+  <label for="phone type1"> I have i phone</label><br>
+  <input type="checkbox" id="phone2" name="phone type2" value="samsung">
+  <label for="phone type2"> I have a samsung</label><br>
+  <input type="checkbox" id="phone3" name="phone type3" value="hawawi">
+  <label for="phone type3"> I have a hawawi</label>
+<br>
+<br>
+<p>enter your barthday:</p>
+<label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+  <br>
+  <br>
+  <p>enter your email:</p>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+
+  <br>
+  <br>
+  <label for="quantity">phone:</label>
+  <input type="number">
+
+  <br>
+  <br>
+
+  <label for="w3review">describe your self:</label>
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+ 
+  </textarea>
+  <br><br>
+  <input type="submit" value="Submit">
+<input type="reset" value="rest"
+      </form>
+
+</body>
+</html>
