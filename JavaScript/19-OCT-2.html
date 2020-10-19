@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Parson {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            FullName() {
+
+                console.log(this.firstName + ' ' + this.lastName + ' ' + this.age + ' is my full name and my age');
+
+            }
+        }
+        var parsonone = new Parson('saja', 'dahamsheh', 22);
+        parsonone.FullName();
+        var parsontow = new Parson('duha', 'dahamsheh', 20);
+        parsontow.FullName();
+        var parsonthree = new Parson('omer', 'mohamed', 16);
+        parsonthree.FullName();
+
+
+
+        class saja extends Parson {
+            constructor(firstName) {
+                super(firstName);
+            }
+
+            FullName() {
+                console.log(`${this.firstName} is my full name`);
+            }
+
+
+        }
+        let s = new saja('dahamsheh');
+        s.FullName();
+
+
+
+
+
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a noise.`);
+            }
+        }
+        var d = new Animal('dog');
+        d.speak();
+
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+
+            CarProp() {
+                console.log(` ${this.name} is my car and its made in ${this.year}`);
+            }
+        }
+
+        myCar = new Car("Ford", 2014);
+        myCar.CarProp();
+    </script>
+</body>
+
+</html>

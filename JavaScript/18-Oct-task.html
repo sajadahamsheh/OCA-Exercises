@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //without prompt: 
+        function tellFortune(x, y, z, d) {
+            var myDetails = {
+                childrenNo: x,
+                partnerName: y,
+                geographicLocation: z,
+                jobTitle: d
+            }
+
+            console.log('You will be a ' + myDetails.jobTitle + ' in ' + myDetails.geographicLocation +
+                ', and married to ' + myDetails.partnerName + ' with ' + myDetails.childrenNo + ' kids ')
+        }
+        tellFortune('4', 'Abdallah', 'zarqa', 'fullstack-developer');
+
+        console.log('================================================')
+
+        //with prompt:
+        var a, b, c, d;
+
+        function tellFortune(x, y, z, n) {
+            var myDetails = {
+                childrenNo: x,
+                partnerName: y,
+                geographicLocation: z,
+                jobTitle: n
+            }
+
+            console.log('You will be a ' + myDetails.jobTitle + ' in ' + myDetails.geographicLocation +
+                ', and married to ' + myDetails.partnerName + ' with ' + myDetails.childrenNo + ' kids ')
+        }
+        a = prompt('childrenNo');
+        b = prompt('partnerName');
+        c = prompt('geographicLocation');
+        d = prompt('jobTitle');
+
+        tellFortune(a, b, c, d);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+        }
+
+        .container {
+            background-color: black;
+            border-radius: .5rem;
+            width: 35%;
+            height: 60%;
+            position: absolute;
+            left: 25%;
+            top: 25%;
+        }
+
+        .head {
+            position: relative;
+            width: 100%;
+            height: 15%;
+            color: whitesmoke;
+            border-bottom: whitesmoke solid .05rem;
+            top: 5%;
+            text-align: center;
+        }
+
+        #on {
+            position: relative;
+            left: 15%;
+            top: 15%;
+        }
+
+        #one,
+        #tow,
+        #three,
+        #four {
+            background-color: whitesmoke;
+            width: 70%;
+            color: black;
+            border: whitesmoke .5rem solid;
+            border-radius: .5rem;
+            margin-top: .5rem;
+
+        }
+
+        #butt {
+            position: relative;
+            left: 50%;
+            width: 20%;
+            height: 2.5rem;
+            background-color: teal;
+            border-radius: .3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>
+                create an account
+            </h1>
+
+        </div>
+        <div id="on">
+            <input type="text" placeholder="name" id="one"><br>
+            <input type="text" placeholder="phonenumber" id=tow><br>
+            <input type="text" placeholder="email" id=three><br>
+            <input type="password" placeholder="pass" id=four><br><br>
+            <input type="checkbox">
+            <label for="type1" style="color: whitesmoke;"> I agree</label><br><br>
+            <input type="submit" value="creat acount" id=butt>
+
+        </div>
+    </div>
+    <script>
+        function validate() {
+
+            var phoneNumber = document.getElementById('tow').value;
+            var name = document.getElementById('one').value;
+            var email = document.getElementById('three').value;
+            var postalRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+            var nameRGEX = /^[A-Z]/;
+            var emailRGEX = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/;
+            var phoneResult = phoneRGEX.test(phoneNumber);
+            var nameResult = nameRGEX.test(name);
+            var emailResult = emailRGEX.test(email);
+
+
+            if (phoneResult == false) {
+                alert('Please enter a valid phone number');
+                return false;
+            }
+            if (nameResult == false) {
+                alert('Please enter a valid name number');
+                return false;
+            }
+            if (emailResult == false) {
+                alert('Please enter a valid email number');
+                return false;
+            }
+            return true;
+
+        }
+
+        function validatee() {
+
+            var email = document.getElementById('three').value;
+            var emailRGEX = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/;
+            var emailResult = emailRGEX.test(email);
+
+
+        }
+        validate();
+    </script>
+</body>
+
+</html>
