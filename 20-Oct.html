@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, id, age) {
+                this.name = name;
+                this.age = age;
+                this.id = id;
+            }
+            Greeting() {
+                console.log('Hi im ' + this.name + 'and im ' + this.age + '  ' + this.id);
+            }
+
+        }
+        var parsonone = new Person('saja', 222, 22);
+        parsonone.Greeting();
+        var parsontow = new Person('duha', 333, 20);
+        parsontow.Greeting();
+        var parsonthree = new Person('omer', 444, 16);
+        parsonthree.Greeting();
+
+        class Teacher extends Person {
+            constructor(name, id, age) {
+                super(name, id, age);
+            }
+
+        }
+        let s = new Teacher('lara ', 12, 2223);
+        s.Greeting();
+
+
+        class Car {
+            constructor(id, type, year) {
+                this.id = id;
+                this.type = type;
+                this.year = year;
+            }
+            start() {
+                console.log(this.type + 'the car is running');
+            }
+
+        }
+        let carone = new Car(12, 'mostanig', 2013);
+        let cartow = new Car(12, 'bmw', 2015);
+        carone.start();
+
+        class Animal {
+            constructor(id, type, isPet) {
+                this.id = id;
+                this.type = type;
+                this.isPet = isPet;
+            }
+            homeAnimal() {
+                var anm = this.isPet;
+                if (this.isPet == true) {
+                    return true;
+                }
+            }
+        }
+        var dog = new Animal(1, dog, true);
+        dog.homeAnimal();
+    </script>
+</body>
+
+</html>
