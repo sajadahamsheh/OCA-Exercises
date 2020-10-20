@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript arrays</title>
+    <style>
+        *{
+            margin: auto;
+        }
+        p{
+            border: .3rem solid purple;
+            margin-top: .5rem;
+            margin-left: 5rem;
+            margin-right: 35rem;
+            padding: .5REM;
+            text-align: center;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <h1>javaScript arrays</h1>
+<p id="ary"></p>
+<p id="ary1"></p>
+<p id="ary2"></p>
+<p id="ary3"></p>
+<p id="ary4"></p>
+         
+ <script>
+     var evenSum=0;
+     var oddSum=0;
+     var evenArr = new Array ( );  
+     var oddArr = new Array ( );  
+     var arr = new Array ( );  
+     for( var i=0 ; i<10 ; i++){ 
+       arr.push(i);
+       oddEven(arr);
+
+       if (arr[i]%2==0)
+       {  evenArr.push(i);
+                       }
+
+            else{oddArr.push(i);}
+
+                                }
+
+
+    document.getElementById("ary").innerHTML ='this is my array '+arr ;
+    document.getElementById("ary1").innerHTML ='this is my evenArray '+evenArr ;
+    document.getElementById("ary2").innerHTML ='this is my odd '+oddArr ;
+    document.getElementById("ary3").innerHTML ='this is the sum of even array '+evenSum ;
+    document.getElementById("ary4").innerHTML ='this is the sum of odd array '+oddSum ;
+
+     console.log(arr);
+     console.log(evenArr);
+     console.log(oddArr);
+     console.log(evenSum);
+     console.log(oddSum);
+
+     function oddEven(Array){
+            if (arr[i]%2==0){
+                evenSum=evenSum+arr[i];
+            }else{oddSum=oddSum+arr[i];}
+
+
+    }
+
+ </script>   
+</body>
+</html>

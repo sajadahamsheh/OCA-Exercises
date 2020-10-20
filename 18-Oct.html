@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+
+
+        var i,j,k;
+        var n=3;
+        var x=5
+ /*for(i=1; i <= 5; i++)
+ {
+  for(j=1; j<=i; j++)
+ {
+   
+   document.write('*');
+  }
+   document.write('<br />');
+  }*/
+
+//////////////////////////////////////////////
+
+
+  
+  for (var i = 1; i <= x; i++) {
+    var strr = '';
+    
+    for (var j = 1; j <= (x - i); j++) {
+      strr += ' ';
+    }
+    
+    for (var k = 1; k <= i; k++) {
+      strr+= '*';
+    }
+    
+    console.log(strr);
+  }
+
+///////////////////////////////////////////
+  for ( i = 0; i < n; i++) { 
+    var str = ''; 
+    for ( j = 1; j < n-i; j++) { 
+      str = str + ' '; 
+    } 
+    for ( k = 1; k <= (2*i+1); k++) { 
+      str = str + '*'; 
+    } 
+    console.log(str); 
+  }
+  /////////////////////////////////
+
+
+    
+
+
+    </script>
+</body>
+</html>
