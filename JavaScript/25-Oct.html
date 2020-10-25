@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <form>
+        <div class=one>
+
+            <i class="fa fa-user icon"></i>
+            <label for="user"><b>key input</b></label>
+            <input type="text" placeholder="Enter key input" name="name" required>
+
+
+            <i class="fa fa-envelope icon"></i>
+            <label for="value"><b>value input</b></label>
+            <input type="text" placeholder="Enter value input" name="value" required>
+
+        </div>
+        <div class="tow">
+            <button type="submit" id="submit-btn" onclick="saveInLocal()" class="signupbtn">submit</button>
+
+            <button id="save-btn" type="submit" onclick="saveInSession()" class="signupbtn">save </button> ​
+
+            <button type="reset" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+        </div>
+
+    </form>
+
+
+
+</body>
+<script>
+    class User {
+        constructor(uname, value) {
+            this.uname = uname;
+            this.value = value;
+
+        }
+        validUname() {
+            return /^[\w]{1,12}(\s[\w]{1,12})?$/i.test(this.uname)
+        }
+        valueName() {
+            return /^[\w]{1,12}(\s[\w]{1,12})?$/i.test(this.value)
+        }
+    }
+
+    function saveInLocal() {
+
+        var items = document.querySelectorAll('input');
+        var list = [];
+
+        for (var i = 0; i < items.length; i++) {
+            if (!(i == items.length - 1)) {
+                let item = items[i].value;
+                list.push(item.trim());
+            } else {
+                list.push(items[i].checked);
+            }
+        }
+        var newUser = new User(list[0], list[1]);
+        if (!(newUser.allValid())) {
+            var submitBtn = document.querySelector('#submit-btn');
+            submitBtn.style = "background:red; cursor: not-allowed;pointer - events: none;color: #c0c0c0;"
+
+        } else {
+            var submitBtn = document.querySelector('#submit-btn');
+            submitBtn.style = "background:#0D0463"
+            localStorage.setItem("personObject", JSON.stringify(newUser));
+
+        }
+
+    }
+
+    function saveInSession() {
+
+        var items = document.querySelectorAll('input');
+
+        // uname /email /phone /pass/pass 2/ date/checkbox 
+        var list = [];
+
+        for (var i = 0; i < items.length; i++) {
+            if (!(i == items.length - 1)) {
+                let item = items[i].value;
+                list.push(item.trim());
+            } else {
+                list.push(items[i].checked);
+            }
+        }
+        var newUser = new User(list[0], list[1]);
+
+        if (!(newUser.allValid())) {
+            var submitBtn = document.querySelector('#save-btn');
+            submitBtn.style = "background:red; cursor: not-allowed;pointer - events: none;color: #c0c0c0;"
+
+
+        } else {
+            var submitBtn = document.querySelector('#save-btn');
+            submitBtn.style = "background:#0D0463"
+
+            sessionStorage.setItem("personObject", JSON.stringify(newUser));
+
+        }
+
+    }
+</script>
+
+</html>
